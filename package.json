@@ -1,5 +1,7 @@
 {
   "name": "rails-first",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
 }
