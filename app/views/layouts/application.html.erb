@@ -23,14 +23,26 @@
                     </a>
                 </li>
                 <li>
-                    <%= link_to "Home", root_path %>
+                  <%= link_to "Home", root_path %>
                 </li>
                 <li>
-                    <%= link_to "Login", login_path %>
+                  <%= link_to "About", about_path %>
                 </li>
                 <li>
-                    <%= link_to "Sign Up", sign_up_path %>
+                  <%= link_to "Contact", contact_path %>
                 </li>
+                <% if user_signed_in? %>
+                <li>
+                  <%= link_to "Logout", signout_path, method: :delete %>
+                </li>
+                <% else %>
+                <li>
+                  <%= link_to "Sign up", signup_path %>
+                </li>
+                <li>
+                  <%= link_to "Sign in", signin_path %>
+                </li>
+                <% end %>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -38,8 +50,9 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <p class="notice"><%= notice %></p>
-                <p class="alert"><%= alert %></p>
+                <% flash.each do |name, message| %>
+                  <%= content_tag(:div, message, class: "alert alert-info #{name}") %>
+                <% end %>
                 <%= yield %>
             </div>
         </div>
