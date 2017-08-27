@@ -5,7 +5,7 @@
 body {
     overflow-x: hidden;
     font-family: 'Rajdhani', sans-serif;
-    background-color: #0B243A;
+
  }
 
 /* Toggle Styles */
@@ -45,7 +45,7 @@ body {
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    background-color: #0B243A;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -159,14 +159,22 @@ body {
 
 .btn {
   background-color: #36CE93!important;
-  border-color: #fff;
+  border-color: #36CE91;
+}
+
+.home-wrap{
+  padding: 3em 1em;
+  color: #fff;
 }
 
 .home-wrap h1{
-  padding: 3em 1em;
-  margin: 0 auto;
-  color: #fff;
   max-width: 700px;
   font-weight: bold;
   font-size: 70px;
+  margin-bottom: -15px;
+}
+
+.sub-home{
+  font-size: 20px;
+  margin-bottom: 5px;
 }
